@@ -1,0 +1,170 @@
+.why-section {
+  padding: 80px 0;
+  position: relative;
+}
+
+.why-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.why-tabs {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.tab-btn {
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: none;
+  background-color: var(--bg-cream);
+  color: var(--text-light);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab-btn.active, .tab-btn:hover {
+  background-color: var(--accent-orange);
+  color: white;
+}
+
+.why-desc {
+  color: var(--text-light);
+  margin-bottom: 25px;
+  font-size: 16px;
+}
+
+.why-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.why-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.check-icon-small {
+  color: var(--accent-orange);
+}
+
+.why-actions {
+  display: flex;
+  gap: 20px;
+}
+
+.why-image-side {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.cloud-image {
+  width: 500px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+}
+
+.cloud-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.stat-circle {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.stat-circle:hover {
+  transform: translateY(-10px) scale(1.05);
+}
+
+.stat-bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  opacity: 0.8;
+}
+
+.stat-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* If the stat has an image background, make text readable */
+.stat-circle:nth-child(2) .stat-content {
+  background-color: rgba(255,255,255,0.85);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.stat-value {
+  font-family: var(--font-heading);
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--text-dark);
+  line-height: 1;
+  margin-bottom: 5px;
+}
+
+.stat-label {
+  font-size: 14px;
+  color: var(--text-light);
+  font-weight: 600;
+}
+
+@media (max-width: 992px) {
+  .why-container {
+    grid-template-columns: 1fr;
+  }
+  .why-tabs {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 576px) {
+  .why-list {
+    grid-template-columns: 1fr;
+  }
+  .stats-container {
+    gap: 20px;
+  }
+}

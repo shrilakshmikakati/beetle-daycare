@@ -1,0 +1,162 @@
+.page-section {
+  padding: 180px 0 120px;
+  min-height: 80vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-header-bg {
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  background-color: var(--shape-pink);
+  z-index: -1;
+  opacity: 0.5;
+}
+
+.page-container {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 60px 80px;
+  border-radius: 40px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+  position: relative;
+  z-index: 10;
+}
+
+.page-title {
+  font-size: 48px;
+  color: var(--accent-orange);
+  margin-bottom: 20px;
+}
+
+.page-subtitle {
+  font-size: 24px;
+  color: var(--text-dark);
+  margin-bottom: 30px;
+  font-family: var(--font-body);
+}
+
+.page-text {
+  font-size: 18px;
+  color: var(--text-light);
+  margin-bottom: 30px;
+  line-height: 2;
+}
+
+.page-list {
+  margin-bottom: 40px;
+  padding-left: 20px;
+}
+
+.page-list li {
+  font-size: 18px;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+  list-style-type: disc;
+}
+
+.page-list li strong {
+  color: #3FC380; /* Green from the mockup */
+}
+
+.page-contact-box {
+  background-color: var(--shape-blue);
+  padding: 50px;
+  border-radius: 30px;
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+
+.contact-email {
+  color: #3FC380;
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.contact-bold {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .page-container {
+    padding: 30px 20px;
+  }
+  .page-title {
+    font-size: 36px;
+  }
+}
+
+/* NEW DESIGN ELEMENTS */
+.pricing-card {
+  background: linear-gradient(135deg, var(--shape-pink) 0%, #FFE5E9 100%);
+  border-radius: 30px;
+  padding: 40px;
+  text-align: center;
+  margin: 40px 0;
+  box-shadow: 0 10px 30px rgba(232, 93, 117, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.pricing-amount {
+  font-size: 64px;
+  font-weight: 800;
+  color: var(--accent-orange);
+  font-family: var(--font-heading);
+  margin: 20px 0;
+}
+
+.pricing-amount span {
+  font-size: 24px;
+  color: var(--text-dark);
+}
+
+.decor-shape {
+  position: absolute;
+  z-index: 0;
+  opacity: 0.6;
+}
+
+.faq-item {
+  background-color: #fcfcfc;
+  border-radius: 20px;
+  padding: 25px;
+  margin-bottom: 20px;
+  border-left: 5px solid var(--shape-yellow);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+}
+
+.faq-question {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  color: var(--text-dark);
+  font-weight: 700;
+}
+
+.letter-row {
+  display: grid;
+  grid-template-columns: minmax(140px, 180px) 1fr;
+  gap: 20px;
+  align-items: start;
+  padding: 25px;
+  border-bottom: 2px dashed #eee;
+  transition: background-color 0.3s ease;
+}
+
+.letter-row:hover {
+  background-color: #fafbfc;
+  border-radius: 15px;
+}
+
+.letter-row:last-child {
+  border-bottom: none;
+}
